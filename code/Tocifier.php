@@ -82,7 +82,7 @@ class Tocifier {
 
         $body = $doc->getElementsByTagName('body')->item(0);
         $this->_html = str_replace(array('<body>', '</body>'), '',
-                                   $doc->saveHTML($body));
+        $doc->saveHTML());
     }
 
     private function _dumpBranch($node, $indent = '') {
