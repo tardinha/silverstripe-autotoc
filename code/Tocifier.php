@@ -74,9 +74,9 @@ class Tocifier {
             $parent['children'][] =& $node;
 
             // Prepend the anchor
-            $anchor = $doc->createElement('a');
+            $anchor = $doc->createElement('a', 'Anchor for ' . $text);
             $anchor->setAttribute('id', $id);
-            $anchor->setAttribute('class', 'anchor');
+            $anchor->setAttribute('class', 'anchor sr-only sr-only-focusable');
             $h->parentNode->insertBefore($anchor, $h);
         }
 
